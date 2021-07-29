@@ -10,6 +10,7 @@ pipeline {
         }
         stage('Build') {
             steps { //Checking out the repo
+                sh 'chmod +x gradlew'
                 sh './gradlew build'
             }
         }
